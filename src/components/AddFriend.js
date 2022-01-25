@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 const AddFriend = () => {
+  const { push } = useHistory();
   const[newFriend, setNewFriend] = useState({
     name: '',
     age: '',
@@ -24,7 +26,8 @@ const AddFriend = () => {
     e.preventDefault();
     axiosWithAuth().post('/api/friends', newFriend)
       .then(resp => {
-        console.log(resp)
+        console.log(resp);
+        push('/friends');
       })
       .catch(err => {
         console.log(err);
