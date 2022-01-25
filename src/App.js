@@ -10,7 +10,7 @@ import AddFriend from './components/AddFriend';
 import Logout from './components/Logout';
 import PrivateRoute from './components/PrivateRoute';
 
-function App() {
+function App() {  
   return (
     <Router>
       <div className="App">
