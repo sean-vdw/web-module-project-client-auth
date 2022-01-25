@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import axios from 'axios';
 
 const Login = () => {
+  const { push } = useHistory();
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
@@ -17,11 +20,22 @@ const Login = () => {
       }
     });
   }
+
+  const login = e => {
+    e.preventDefault();
+    axios.post('http://localhost:9000/api/login', credentials)
+      .then(resp => {
+        localStorage.setItem('token', resp.data.token);
+        push('/friends');
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
   
-  console.log(credentials)
   return (
     <div className="container login-container">
-      <Form>
+      <Form onSubmit={login}>
         <h2>Log In</h2>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Username</Form.Label>
