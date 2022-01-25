@@ -15,7 +15,7 @@ const FriendsList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="friends-list">
       <h2>Friends List</h2>
       {friends.map(friend => {
         return (

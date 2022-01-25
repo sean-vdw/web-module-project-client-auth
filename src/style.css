@@ -11,6 +11,16 @@ label {
     display:block;
 }
 
+a {
+    color: #eeeeee;
+    text-decoration: none;
+    padding: 0 3%;
+}
+
+.nav-links {
+    width: 50%;
+}
+
 .login-container {
     width: 50%;
     margin: 3% auto;
@@ -18,6 +28,10 @@ label {
     background-color: #fff;
     border: 1px solid #7e7e7e;
     border-radius: 8px;
+}
+
+.friends-list {
+    margin-top: 5%;
 }
 
 .friend-card {
