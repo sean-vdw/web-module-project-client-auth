@@ -21,7 +21,7 @@ a {
     width: 50%;
 }
 
-.login-container {
+.login-container, .add-container {
     width: 50%;
     margin: 3% auto;
     padding: 4% 2%;
