@@ -7,6 +7,7 @@ import FriendNav from './components/Navbar';
 import Login from './components/Login';
 import FriendsList from './components/FriendsList';
 import AddFriend from './components/AddFriend';
+import Logout from './components/Logout';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path='/' component={Login}/>
         <Route exact path='/friends' component={FriendsList} />
         <Route exact path='/friends/add' component={AddFriend} />
+        <Route path='/logout' component={Logout}/>
       </div>
     </Router>
   );
