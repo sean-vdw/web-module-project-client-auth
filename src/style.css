@@ -19,3 +19,12 @@ label {
     border: 1px solid #7e7e7e;
     border-radius: 8px;
 }
+
+.friend-card {
+    width: 30%;
+    margin: 3% auto;
+    padding: 4% 2%;
+    background-color: #fff;
+    border: 1px solid #7e7e7e;
+    border-radius: 8px;
+}
