@@ -13,4 +13,9 @@ label {
 
 .login-container {
     width: 50%;
+    margin: 3% auto;
+    padding: 4% 2%;
+    background-color: #fff;
+    border: 1px solid #7e7e7e;
+    border-radius: 8px;
 }
